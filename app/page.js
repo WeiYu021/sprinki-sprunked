@@ -25,29 +25,49 @@ export const metadata = getSEOTags({
 
 export default function Home() {
   const games = [
-    { url_path: '/sprunki', title: 'Sprunki' },
-    { url_path: '/sprunki-phase-2', title: 'Sprunki Phase 2' },
-    { url_path: '/sprunki-phase-3', title: 'Sprunki Phase 3' },
+    { url_path: '/sprunkisprunked', title: 'Sprunki Sprunked' },
+    { url_path: '/sprunkisprunked2', title: 'Sprunki Sprunked 2.0' },
+    { url_path: '/sprunkedxsprunki', title: 'Sprunked x Sprunki' },
   ]
+
+// Sprunki Sprunked 2.0 
+// https://sprunkedgame.org/sprunked-game.embed
+// Sprunki Sprunked 2.0 Mod is a version that enhances the original Incredibox Sprunki series, 
+// introducing a mix of horror features, exclusive characters, and an engaging atmosphere. 
+// This mod builds on its predecessor to create new soundscapes, enchanting characters, and frightening visuals, 
+// offering players an unforgettable experience. The gameplay involves selecting enhanced characters, 
+// combining sounds to craft personal soundtracks filled with terrifying beats and melodies, and 
+// unlocking special sound effects through unique combinations of characters. Key features include 
+// redesigned character looks with horror-inspired designs, magnified horror visuals that enhance the 
+// game's chilling atmosphere, and enriched sound layers for more intense music mixes1.
+
+// Sprunked x Sprunki
+// https://wowtbc.net/sprunkin/sprunked-x-sprunki/index.html
+// The Sprunked x Sprunki Mod combines elements from both the Sprunked and Sprunki mods within the Incredibox universe. 
+// It features redesigned characters that blend the dark essence of Sprunked with the playful traits of Sprunki. 
+// This mod emphasizes a horror-themed ambiance with dark visuals and shadowy backgrounds, creating an immersive atmosphere 
+// that complements the music. Players 
+// can enjoy enhanced sound effects that add depth to their musical compositions 
+// while maintaining the core gameplay mechanics of Incredibox2.
+
+// Sprunki Sprunked
+// https://html-classic.itch.zone/html/11995631/index.html
+// The New Incredibox - SPRUNKED  is a fun, interactive music-making game where you combine beats, sounds, and 
+// characters to create original tracks. Dive into a vibrant world where each character adds a unique sound, 
+// and every choice builds a new beat. With easy drag-and-drop controls, Incredibox - SPRUNKED lets 
+// you explore endless musical possibilities in a game that’s both creative and addictive. 
 
   return (
     <>
       <main>
-        <Hero title="Welcome to the World of Sprunki Incredibox" discription="Explore the unique universe of Sprunki Incredibox!" />
+        <Hero title="SPRUNKI SPRUNKED: The Ultimate Music-Making Adventure" discription="Dive into the rhythmic world of SPRUNKI SPRUNKED, where every beat tells a story and every sound is a masterpiece waiting to be created." />
         <Suspense>
           <SmallHeader />
         </Suspense>
         <div className="bg-amber-100">
           <div className="mx-auto bg-white lg:max-w-2/3">
-            <IframeBlock title="Welcome to Sprunki, Play Incredibox Sprunki Right Now!" discription="Your ultimate hub for all things Sprunki Incredibox! Discover the latest news, explore character guides, watch creative mixes, and access essential tools to enhance your Sprunki experience. Whether you're a devoted fan or a curious newcomer, Sprunki.com is your go-to resource for diving into this vibrant musical universe.
-
-              Experience the newest version of Incredibox with a fresh, funky twist. Create your own tunes by blending beats, effects, and vocals with our unique Sprunki characters!
-
-              (Content Warning: This game may contain violence, suggestive themes, crude humor, blood, and other material not suitable for users under 13 years old. Our rating system ensures that content is suitable for different age groups. Please play responsibly.)
-
-              Hold your horses for 3-5 seconds while the beat drops! Once it\'s loaded, hit it to get this party started!"
-
-              url="https://game.sprunki.com/game.sprunki.html" />
+            <IframeBlock title="Create Your Own Musical Masterpiece with SPRUNKI SPRUNKED" discription="Unleash your inner composer in SPRUNKI SPRUNKED, a dynamic music-making game that lets you mix and match unique sounds and characters to craft your own unforgettable tracks. With intuitive controls and endless creative possibilities, this game is your ticket to a world of musical innovation and fun!"
+              url="https://html-classic.itch.zone/html/11995631/index.html" />
             <GameRecommendation games={games} />
             <Types title="The Complete Guide to Sprunki Games" description="Explore the complete collection of Sprunki games and mods! From the original classic to creative fan adaptations, discover all the different ways to experience Sprunki's musical universe."/>
             <Videos/>
