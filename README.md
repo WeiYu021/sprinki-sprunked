@@ -1,35 +1,63 @@
-# ShipFast — Javascript
+# Sprunki Sprunked Game Website
 
-Hey maker 👋 it's Marc from [ShipFast](https://shipfa.st/docs). Let's get your startup off the ground, FAST ⚡️
+🎮 **Welcome to the Sprunki Sprunked Game Website!** 🎶
 
-<sub>**Watch/Star the repo to be notified when updates are pushed**</sub>
+This repository contains the source code for the Sprunki Sprunked game website, a platform dedicated to the fans and players of the Sprunki Sprunked series. Here, you can dive into the game's world, explore its features, and get started on your musical horror adventure.
 
-## Get Started
+## 🌟 Key Features
 
-1. Follow the [Get Started Tutorial](https://shipfa.st/docs) to clone the repo and run your local server 💻
+- **Interactive Music-Making**: Create your own tracks by combining beats, sounds, and characters.
+- **Horror-Themed Mod**: Experience a chilling twist with the Sprunki Sprunked 2.0 mod, featuring horror-inspired characters and atmosphere.
+- **Community Engagement**: Connect with other players, share your creations, and explore the community's favorite tracks.
 
-<sub>**Looking for the /pages router version?** Use this [documentation](https://shipfa.st/docs-old) instead</sub>
+## 🚀 Getting Started
 
-2. Follow the [Ship In 5 Minutes Tutorial](https://shipfa.st/docs/tutorials/ship-in-5-minutes) to learn the foundation and ship your app quickly ⚡️
+Ready to jump into the game? It's easy!
 
-## Links
+1. **Visit the Website**: [Sprunki Sprunked Game Website](https://sprunkisprunked.best)
+2. **Explore the Mods**: Discover the different mods available for an enhanced experience.
+3. **Start Playing**: Click the "Play Now" button to begin your musical journey.
 
--   [📚 Documentation](https://shipfa.st/docs)
--   [📣 Updates](https://shipfast.beehiiv.com/)
--   [🧑‍💻 Discord](https://shipfa.st/dashboard)
--   [🥇 Leaderboard](https://shipfa.st/leaderboard)
+## 🤝 Contributing
 
-## Support
+We welcome contributions from the community! If you have ideas for new features, bug fixes, or improvements, please submit a pull request or open an issue.
 
-Reach out at marc@shipfa.st
+### 🛠️ Development Setup
 
-\_
+To set up the development environment for the website:
 
-Let's ship it, FAST ⚡️
+1. **Clone the Repository**:
+git clone https://github.com/WeiYu021/sprinki-sprunked.git
 
-P.S.
 
--   Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneur's journey. Join 3,132 founders ⭐️
--   Don't get banned from Stripe for 1 dispute. Use [ByeDispute](https://byedispute.com/?ref=shipfast_readme) to prevent them from happenening 🛡️
--   Make your launch go viral and get your first customers with [LaunchViral](https://launchvir.al/?ref=shipfast_readme) 🚀
--   Stop paying 0.4% per Stripe invoices [Zenvoice](https://zenvoice.io/?ref=shipfast_readme) 🤕
+2. **Install Dependencies**:
+npm install
+
+or
+yarn install
+
+
+3. **Start Development**:
+npm run dev
+
+or
+yarn dev
+
+
+## 📜 Code of Conduct
+
+Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) when participating in this project.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE.md). Feel free to use, modify, and distribute the code as needed.
+
+## 🙏 Acknowledgements
+
+A big thank you to the community for their support and enthusiasm for the Sprunki Sprunked series. Your passion is what drives this project forward.
+
+---
+
+We hope you enjoy the Sprunki Sprunked game and the website! If you have any questions or need assistance, don't hesitate to reach out. Happy gaming! 🎮🎶
+
+[Visit Sprunki Sprunked Game Website](https://sprunkisprunked.best)
