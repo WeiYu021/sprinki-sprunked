@@ -11,7 +11,7 @@ const RadioBlock = () => {
 
   return (
     <div className="p-4 border rounded shadow-md"> 
-      <h2 className="text-xl font-bold mb-4">How many types of Sprunki games have you played?</h2>
+      <h2 className="text-xl font-bold mb-4">How many types of Sprunki Sprunked have you played?</h2>
       <div className="flex flex-col space-y-2">
         <label className="flex items-center">
           <input

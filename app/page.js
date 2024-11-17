@@ -19,7 +19,7 @@ import Privacy from '@/game_components/Privacy';
 import { getSEOTags } from "@/libs/seo";
 
 export const metadata = getSEOTags({
-  title: "Sprunki Incredibox: Ultimate Music Creation Game | Characters, Download & More",
+  title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
   canonicalUrlRelative: "/",
 });
 
@@ -69,31 +69,24 @@ export default function Home() {
             <IframeBlock title="Create Your Own Musical Masterpiece with SPRUNKI SPRUNKED" discription="Unleash your inner composer in SPRUNKI SPRUNKED, a dynamic music-making game that lets you mix and match unique sounds and characters to craft your own unforgettable tracks. With intuitive controls and endless creative possibilities, this game is your ticket to a world of musical innovation and fun!"
               url="https://html-classic.itch.zone/html/11995631/index.html" />
             <GameRecommendation games={games} />
-            <Types title="The Complete Guide to Sprunki Games" description="Explore the complete collection of Sprunki games and mods! From the original classic to creative fan adaptations, discover all the different ways to experience Sprunki's musical universe."/>
-            <Videos/>
-            {/* 游戏角色 */}
+            <Types title="Dive into the World of Sprunki Sprunked: Your Ultimate Guide to the Creepiest Music-Making Games" description="Welcome to the thrilling world of Sprunki Sprunked games, where music meets horror in a unique and immersive experience. These games are not just about creating beats; they're about crafting a chilling atmosphere with every note. Whether you're a fan of Incredibox or looking for a new way to express your creativity, our guide will take you through the spine-tingling features, characters, and soundscapes of each game. Get ready to mix, match, and scare your way to the top of the music charts."/>
+            {/* <Videos/>
             <Characters/>
-            {/* 游戏攻略 */}
             <GamePlay/>
-            {/* 游戏下载 */}
             <Download/>
-            {/* 游戏背景故事 */}
             <Lore/>
-            {/* 游戏创作 */}
             <Creation/>
-            {/* 游戏社区 */}
             <Community/>
-            {/* 游戏相关资源 */}
             <Resource/>
             <FAQ/>
             <About/>
-            <Privacy/>
+            <Privacy/> */}
 
           </div>
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

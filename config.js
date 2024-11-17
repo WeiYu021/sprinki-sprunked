@@ -2,12 +2,12 @@ import themes from "daisyui/src/theming/themes";
 
 const config = {
   // REQUIRED
-  appName: "Incredibox Sprunki",
+  appName: "Sprunki Sprunked",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "Explore the world of Sprunki Incredibox. Download the game, meet characters, join the community, and create amazing music mixes. Discover fanart, lore, and more!",
+    "Dive into the rhythmic world of SPRUNKI SPRUNKED, where every beat tells a story and every sound is a masterpiece waiting to be created.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "incrediboxsprunki.xyz",
+  domainName: "sprunkisprunked.best",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
     id: "",

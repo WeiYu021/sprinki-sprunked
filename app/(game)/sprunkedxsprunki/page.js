@@ -5,41 +5,51 @@ import IframeBlock from '@/game_components/IframeBlock';
 import SmallHeader from '@/game_components/SmallHeader';
 import GameRecommendation from '@/game_components/GameRecommendation';
 import { getSEOTags } from "@/libs/seo";
+import Types from '@/game_components/Types';
 
 export const metadata = getSEOTags({
-  title: "Sprunki Phase 3: Ultimate Music Creation Game | Characters, Download & More",
-  canonicalUrlRelative: "/sprunki-phase-3",
+  title: "Sprunked x Sprunki: A Chilling Collaboration - Blend Horror with Music in Incredibox",
+  canonicalUrlRelative: "/sprunkedxsprunki",
 });
 
-export default function Sprunkiphase3() {
+
+export default function Home() {
   const games = [
-    { url_path: '/sprunki', title: 'Sprunki' },
-    { url_path: '/sprunki-phase-2', title: 'Sprunki Phase 2' },
-    { url_path: '/sprunki-phase-3', title: 'Sprunki Phase 3' },
+    { url_path: '/sprunkisprunked', title: 'Sprunki Sprunked' },
+    { url_path: '/sprunkisprunked2', title: 'Sprunki Sprunked 2.0' },
+    { url_path: '/sprunkedxsprunki', title: 'Sprunked x Sprunki' },
   ]
+
   return (
     <>
       <main>
-        <Hero title="Welcome to the World of Sprunki Incredibox" discription="Explore the unique universe of Sprunki Incredibox!" />
+        <Hero title="Sprunked x Sprunki: A Fusion of Fear and Fun in the Incredibox Universe" discription="Experience the perfect blend of horror and playfulness with Sprunked x Sprunki" />
         <Suspense>
           <SmallHeader />
         </Suspense>
         <div className="bg-amber-100">
           <div className="mx-auto bg-white lg:max-w-2/3">
-            <IframeBlock title="Welcome to Sprunki, Play Incredibox Sprunki Right Now!" discription="Your ultimate hub for all things Sprunki Incredibox! Discover the latest news, explore character guides, watch creative mixes, and access essential tools to enhance your Sprunki experience. Whether you're a devoted fan or a curious newcomer, Sprunki.com is your go-to resource for diving into this vibrant musical universe.
-
-              Experience the newest version of Incredibox with a fresh, funky twist. Create your own tunes by blending beats, effects, and vocals with our unique Sprunki characters!
-
-              (Content Warning: This game may contain violence, suggestive themes, crude humor, blood, and other material not suitable for users under 13 years old. Our rating system ensures that content is suitable for different age groups. Please play responsibly.)
-
-              Hold your horses for 3-5 seconds while the beat drops! Once it\'s loaded, hit it to get this party started!"
-
-              url="https://wowtbc.net/sprunki/phase-3/index.html" />
+            <IframeBlock title="Discover Sprunked x Sprunki - Blend Horror with Music in One Click" discription="Are you ready to explore the fusion of two worlds? Play Sprunked x Sprunki now and let the dark and playful characters guide you through a musical journey like no other. Click the button below to dive into a horror-themed Incredibox experience that will have you composing tunes in the shadows."
+              url="https://wowtbc.net/sprunkin/sprunked-x-sprunki/index.html" />
             <GameRecommendation games={games} />
+            <Types title="Dive into the World of Sprunki Sprunked: Your Ultimate Guide to the Creepiest Music-Making Games" description="Welcome to the thrilling world of Sprunki Sprunked games, where music meets horror in a unique and immersive experience. These games are not just about creating beats; they're about crafting a chilling atmosphere with every note. Whether you're a fan of Incredibox or looking for a new way to express your creativity, our guide will take you through the spine-tingling features, characters, and soundscapes of each game. Get ready to mix, match, and scare your way to the top of the music charts."/>
+            {/* <Videos/>
+            <Characters/>
+            <GamePlay/>
+            <Download/>
+            <Lore/>
+            <Creation/>
+            <Community/>
+            <Resource/>
+            <FAQ/>
+            <About/>
+            <Privacy/> */}
+
           </div>
         </div>
       </main>
-      <Footer />
+
+      {/* <Footer /> */}
     </>
   );
 }

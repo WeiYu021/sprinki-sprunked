@@ -28,34 +28,35 @@ const Types = ({ title, description }) => {
       <RadioBlock />
       <div className="mt-8 space-y-4">
         <SmallTypes
-          gameName="游戏1"
-          gameIntro="这是游戏1的介绍。"
-          feature1="特点1"
-          feature2="特点2"
-          feature3="特点3"
-          tag1="标签1"
-          tag2="标签2"
-          tag3="标签3"
+          gameName="Sprunki Sprunked"
+          gameIntro="Embark on a musical adventure with The New Sprunki Sprunked, a game that lets you create original tracks by combining beats, sounds, and characters in a vibrant and interactive world.。"
+          feature1="Easy Drag-and-Drop Controls: Intuitive gameplay that allows you to focus on the music, not the mechanics."
+          feature2="Endless Musical Possibilities: With a variety of characters and sounds, every choice leads to a new and unique beat."
+          feature3="Creative and Addictive Gameplay: Dive into a game that stimulates your creativity and keeps you coming back for more."
+          tag1="Interactive Music-Making"
+          tag2="Vibrant World"
+          tag3="Creative Adventure
+"
         />
         <SmallTypes
-          gameName="游戏2"
-          gameIntro="这是游戏2的介绍。"
-          feature1="特点1"
-          feature2="特点2"
-          feature3="特点3"
-          tag1="标签1"
-          tag2="标签2"
-          tag3="标签3"
+          gameName="Sprunki Sprunked 2.0"
+          gameIntro="Dare to step into the enhanced world of Sprunki Sprunked 2.0, where every character and sound has been reimagined with a horror twist. This mod takes the original series to new heights of fear and creativity."
+          feature1="Horror-Inspired Characters: Each character has been redesigned with a terrifying touch, making your music as scary as it is catchy."
+          feature2="Engaging Atmosphere: The game's chilling visuals and soundscapes pull you into a world of fear, where every beat has a bite."
+          feature3="Unlockable Sound Effects: Discover special sound effects by combining characters in unique ways, adding a layer of depth to your musical compositions."
+          tag1="Horror Themed"
+          tag2="Enhanced Characters"
+          tag3="Interactive Music-Making"
         />
         <SmallTypes
-          gameName="游戏3"
-          gameIntro="这是游戏3的介绍。"
-          feature1="特点1"
-          feature2="特点2"
-          feature3="特点3"
-          tag1="标签1"
-          tag2="标签2"
-          tag3="标签3"
+          gameName="Sprunked x Sprunki"
+          gameIntro="Experience the fusion of two worlds with Sprunked x Sprunki, a mod that blends the dark essence of Sprunked with the playful traits of Sprunki, creating a horror-themed ambiance that's perfect for music lovers with a taste for the macabre."
+          feature1="Redesigned Characters: A mix of Sprunked's darkness and Sprunki's playfulness, these characters offer a fresh take on the Incredibox universe."
+          feature2="Immersive Atmosphere: Dark visuals and shadowy backgrounds envelop you in a horror-themed environment that enhances your musical experience."
+          feature3="Enhanced Sound Effects: Add depth to your compositions with improved sound effects that keep the core gameplay mechanics intact."
+          tag1="Dark Essence"
+          tag2="Horror Ambiance"
+          tag3="Musical Depth"
         />
       </div>
     </div>
