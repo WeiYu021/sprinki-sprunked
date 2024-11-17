@@ -6,6 +6,8 @@ import config from "@/config";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Suspense } from 'react'
+import Script from 'next/script';
+
 const font = Inter({ subsets: ["latin"] });
 
 export const viewport = {
@@ -27,6 +29,18 @@ export default function RootLayout({ children }) {
           <PlausibleProvider domain={config.domainName} />
         </head>
       )}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-CMFD8N9DFZ"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CMFD8N9DFZ');
+        `}
+      </Script>
       <body>
         
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
