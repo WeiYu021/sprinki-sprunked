@@ -30,7 +30,7 @@ const Types = ({ title, description }) => {
       <div className="mt-8 space-y-4">
         <SmallTypes
           gameName="Sprunki Sprunked"
-          gameIntro="Embark on a musical adventure with The New Sprunki Sprunked, a game that lets you create original tracks by combining beats, sounds, and characters in a vibrant and interactive world.。"
+          gameIntro="Embark on a musical adventure with The New Sprunki Sprunked, a game that lets you create original tracks by combining beats, sounds, and characters in a vibrant and interactive world。"
           feature1="Easy Drag-and-Drop Controls: Intuitive gameplay that allows you to focus on the music, not the mechanics."
           feature2="Endless Musical Possibilities: With a variety of characters and sounds, every choice leads to a new and unique beat."
           feature3="Creative and Addictive Gameplay: Dive into a game that stimulates your creativity and keeps you coming back for more."
@@ -59,6 +59,25 @@ const Types = ({ title, description }) => {
           tag2="Horror Ambiance"
           tag3="Musical Depth"
         />
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 mt-4 mb-4">
+       <h3 className="text-xl font-bold mb-2">More Website:</h3>
+        <a href="https://iuu.ai/" className="text-blue-500 hover:underline font-bold text-lg">iuu AI</a>
+        <br />
+        <a href="https://magicbox.tools/" title="MagicBox.Tools - AI Tools Directory" className="text-blue-500 hover:underline font-bold text-lg">MagicBox.Tools - AI Tools Diresctory</a>
+        <br />
+        <a href="https://aiwith.me/" title="AI With Me: Discover thousands of AI Tools" className="text-blue-500 hover:underline font-bold text-lg">AI With Me</a>
+        <br />
+        <a title="The Best AI Tools" href="https://allinai.tools" className="text-blue-500 hover:underline font-bold text-lg">All in AI Tools</a>
+        <br />
+        <a href="https://right-ai.com/" title="RightAI Tools Directory" className="text-blue-500 hover:underline font-bold text-lg">RightAI Tools Diresctory</a>
+        <br />     
+        <a href="https://aijustworks.com" title="AI Just Works" className="text-blue-500 hover:underline font-bold text-lg">AI Just Works</a>
+        <br />
+        <a href="https://SeekAIs.com/" title="SeekAIs" className="text-blue-500 hover:underline font-bold text-lg">SeekAIs - AI Tools Directory</a> 
+        <br />
+        <a href="https://AIToolly.com/" title="Best AI Tools Directory" className="text-blue-500 hover:underline font-bold text-lg">AIToolly</a>
+        <a href="https://www.aitoolnet.com/" target="_blank"><img src="http://www.aitoolnet.com/static/assets/images/logo.svg" alt="aitoolnet.com" /></a>
       </div>
     </div>
   );

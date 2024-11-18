@@ -64,7 +64,6 @@ const RadioBlock = () => {
           5
         </label>
       </div>
-      <a href="https://iuu.ai/" className="text-blue-500 hover:underline font-bold text-lg">iuu AI</a>
     </div>
   );
 };
