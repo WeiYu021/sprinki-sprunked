@@ -46,13 +46,9 @@ const Videos = () => {
     <div className="container mx-auto p-8 border-t border-b border-gray-300" id="videos">
       <h2 className="text-2xl font-extrabold mb-4"> Featured Sprunki Video </h2>
       <div className="mt-8 space-y-4">
-        <SmallVideoBlock title="游戏视频1" description="---------------------------
-        --------------------------------------------------------------------------
-        --------------------------------------------------------------------------
-        游戏视频介绍
-        --------------------------------------------------------------------------
-        --------------------------------------------------------------------------
-        --------------------------" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/1.mp4" />
+        <SmallVideoBlock title="Incredibox Sprunki | Sprunked VS Sprunked BUT Sprunki Style" description="Comparison of 2 Incredibox mods. Incredibox Sprunki Sprunked VS Sprunked BUT Sprunki Style" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/2.mp4" />
+        <SmallVideoBlock title="Sprunked x Sprunki /Incredibox Sprunki" description="" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/3.mp4" />
+        <SmallVideoBlock title="Sprunked 2.0 - Sprunki Mods" description="Sprunked 2.0 - Sprunki Mods Incredibox Sprunki Mods    • Incredibox - POPPY PLAYTIME - Horror ... Incredibox Sprunki ALL PHASES VS Sprunki Phase 1 to 10 Mods" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/4.mp4" />
       </div>
     </div>
   );

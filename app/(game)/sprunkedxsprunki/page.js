@@ -4,8 +4,20 @@ import Footer from "@/game_components/Footer";
 import IframeBlock from '@/game_components/IframeBlock';
 import SmallHeader from '@/game_components/SmallHeader';
 import GameRecommendation from '@/game_components/GameRecommendation';
-import { getSEOTags } from "@/libs/seo";
 import Types from '@/game_components/Types';
+import Videos from '@/game_components/Videos';
+import Characters from "@/game_components/Characters";
+import GamePlay from "@/game_components/GamePlay";
+import Download from "@/game_components/Download";
+import Lore from "@/game_components/Lore"
+import Creation from "@/game_components/Creation";
+import Community from "@/game_components/Community";
+import Resource from "@/game_components/Resource"
+import FAQ from '@/game_components/FAQ';
+import About from '@/game_components/About';
+import Privacy from '@/game_components/Privacy';
+import { getSEOTags } from "@/libs/seo";
+
 
 export const metadata = getSEOTags({
   title: "Sprunked x Sprunki: A Chilling Collaboration - Blend Horror with Music in Incredibox",
@@ -33,17 +45,17 @@ export default function Home() {
               url="https://wowtbc.net/sprunkin/sprunked-x-sprunki/index.html" />
             <GameRecommendation games={games} />
             <Types title="Dive into the World of Sprunki Sprunked: Your Ultimate Guide to the Creepiest Music-Making Games" description="Welcome to the thrilling world of Sprunki Sprunked games, where music meets horror in a unique and immersive experience. These games are not just about creating beats; they're about crafting a chilling atmosphere with every note. Whether you're a fan of Incredibox or looking for a new way to express your creativity, our guide will take you through the spine-tingling features, characters, and soundscapes of each game. Get ready to mix, match, and scare your way to the top of the music charts."/>
-            {/* <Videos/>
-            <Characters/>
+            <Videos/>
+            {/*<Characters/>
             <GamePlay/>
             <Download/>
             <Lore/>
             <Creation/>
             <Community/>
             <Resource/>
-            <FAQ/>
+            <FAQ/> */}
             <About/>
-            <Privacy/> */}
+            <Privacy/>
 
           </div>
         </div>

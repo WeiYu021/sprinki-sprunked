@@ -70,17 +70,17 @@ export default function Home() {
               url="https://html-classic.itch.zone/html/11995631/index.html" />
             <GameRecommendation games={games} />
             <Types title="Dive into the World of Sprunki Sprunked: Your Ultimate Guide to the Creepiest Music-Making Games" description="Welcome to the thrilling world of Sprunki Sprunked games, where music meets horror in a unique and immersive experience. These games are not just about creating beats; they're about crafting a chilling atmosphere with every note. Whether you're a fan of Incredibox or looking for a new way to express your creativity, our guide will take you through the spine-tingling features, characters, and soundscapes of each game. Get ready to mix, match, and scare your way to the top of the music charts."/>
-            {/* <Videos/>
-            <Characters/>
+            <Videos/>
+            {/*<Characters/>
             <GamePlay/>
             <Download/>
             <Lore/>
             <Creation/>
             <Community/>
             <Resource/>
-            <FAQ/>
+            <FAQ/> */}
             <About/>
-            <Privacy/> */}
+            <Privacy/>
 
           </div>
         </div>

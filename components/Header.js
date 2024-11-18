@@ -26,15 +26,15 @@ const links = [
     label: "About",
   },
   {
-    href: "/",
+    href: "/#about",
     label: "Contact",
   },
   {
-    href: "/",
+    href: "/#about",
     label: "Terms of use",
   },
   {
-    href: "/",
+    href: "/#privacy",
     label: "Privacy",
   },
 ];
