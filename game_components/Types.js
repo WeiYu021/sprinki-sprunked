@@ -6,6 +6,7 @@ const SmallTypes = ({ gameName, gameIntro, feature1, feature2, feature3, tag1, t
     <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
       <h3 className="text-xl font-bold mb-2">{gameName}</h3>
       <p className="text-gray-700 mb-4">{gameIntro}</p>
+
       <ul className="list-disc list-inside mb-4">
         <li>{feature1}</li>
         <li>{feature2}</li>
