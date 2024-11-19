@@ -59,6 +59,16 @@ const Types = ({ title, description }) => {
           tag2="Horror Ambiance"
           tag3="Musical Depth"
         />
+        <SmallTypes
+          gameName="Sprunki Romantic Mod"
+          gameIntro="The Sprunki Romantic Mod introduces a whimsical and humorous take on the romantic relationships within the Incredibox universe, featuring characters in both conventional and quirky scenarios. "
+          feature1="Unique Character Dynamics: The mod showcases a variety of characters with distinct personalities and romantic interactions, making each encounter feel fresh and engaging. Players can explore different relationships, adding depth to the narrative."
+          feature2="Humorous Gameplay Mechanics: The challenge incorporates lighthearted elements that reflect the quirks of romance, allowing players to experience both sweet and silly moments as they progress through levels."
+          feature3="Interactive Music Creation: As with the original Incredibox, players can mix and match sounds while participating in the romantic challenges, creating a unique musical backdrop that complements the gameplay. This feature encourages creativity and enhances the overall experience."
+          tag1="Incredibox"
+          tag2="SprunkiRomance"
+          tag3="RhythmGame"
+        />
       </div>
       <div className="bg-white shadow-lg rounded-lg p-6 mt-4 mb-4">
        <h3 className="text-xl font-bold mb-2">More Website:</h3>

@@ -30,6 +30,7 @@ export default function Home() {
     { url_path: '/sprunkisprunked', title: 'Sprunki Sprunked' },
     { url_path: '/sprunkisprunked2', title: 'Sprunki Sprunked 2.0' },
     { url_path: '/sprunkedxsprunki', title: 'Sprunked x Sprunki' },
+    { url_path: '/sprunkiromanticmod', title: 'Sprunki Romantic Mod' },
   ]
 
   return (
