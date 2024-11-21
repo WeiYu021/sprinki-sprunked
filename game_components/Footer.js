@@ -3,10 +3,16 @@ import Image from "next/image";
 import config from "@/config";
 import logo from "@/app/icon.png";
 
+import { Trans } from 'react-i18next/TransWithoutContext'
+import { languages } from '../app/i18n/settings'
+import { useTranslation } from '../app/i18n'
+
+
 // Add the Footer to the bottom of your landing page and more.
 // The support link is connected to the config.js file. If there's no config.mailgun.supportEmail, the link won't be displayed.
 
-const Footer = () => {
+const Footer = async ({ lng }) => {
+  const { t } = await useTranslation(lng, 'footer')
   return (
     <footer className="bg-base-200 border-t border-base-content/10">
       <div className="max-w-7xl mx-auto px-8 py-24">
@@ -30,6 +36,19 @@ const Footer = () => {
               </strong>
             </Link>
 
+            <Trans i18nKey="languageSwitcher" t={t}>
+              Switch from <strong>{{ lng }}</strong> to:{' '}
+            </Trans>
+            {languages.filter((l) => lng !== l).map((l, index) => {
+              return (
+                <span key={l}>
+                  {index > 0 && (' or ')}
+                  <Link href={`/${l}`}>
+                    {l}
+                  </Link>
+                </span>
+              )
+            })}
             <p className="mt-3 text-sm text-base-content/80">
               {config.appDescription}
             </p>

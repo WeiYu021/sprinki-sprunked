@@ -17,13 +17,16 @@ import FAQ from '@/game_components/FAQ';
 import About from '@/game_components/About';
 import Privacy from '@/game_components/Privacy';
 import { getSEOTags } from "@/libs/seo";
+import { useTranslation } from '../i18n';
+import Language from "@/game_components/Language"
 
 export const metadata = getSEOTags({
   title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
   canonicalUrlRelative: "/",
 });
 
-export default function Home() {
+export default async function Home({ params: { lng } }) {
+  const { t } = await useTranslation(lng)
   const games = [
     { url_path: '/sprunkisprunked', title: 'Sprunki Sprunked' },
     { url_path: '/sprunkisprunked2', title: 'Sprunki Sprunked 2.0' },
@@ -59,8 +62,9 @@ export default function Home() {
 
   return (
     <>
+      <Language lng={lng}/>
       <main>
-        <Hero title="SPRUNKI SPRUNKED: The Ultimate Music-Making Adventure" discription="Dive into the rhythmic world of SPRUNKI SPRUNKED, where every beat tells a story and every sound is a masterpiece waiting to be created." />
+        <Hero title={t('title')} discription="Dive into the rhythmic world of SPRUNKI SPRUNKED, where every beat tells a story and every sound is a masterpiece waiting to be created." />
         <Suspense>
           <SmallHeader />
         </Suspense>
