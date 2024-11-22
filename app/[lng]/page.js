@@ -17,7 +17,7 @@ import FAQ from '@/game_components/FAQ';
 import About from '@/game_components/About';
 import Privacy from '@/game_components/Privacy';
 import { getSEOTags } from "@/libs/seo";
-import { useTranslation as useCustomTranslation } from '../i18n';
+import { useTranslation as Translation} from '../i18n';
 import Language from "@/game_components/Language"
 
 export const metadata = getSEOTags({
@@ -26,7 +26,7 @@ export const metadata = getSEOTags({
 });
 
 export default async function Home({ params: { lng } }) {
-  const { t } = await useCustomTranslation(lng)
+  const { t } = await Translation(lng)
   const games = [
     { url_path: '/sprunkisprunked', title: 'Sprunki Sprunked' },
     { url_path: '/sprunkisprunked2', title: 'Sprunki Sprunked 2.0' },
