@@ -12,7 +12,7 @@ const LanguageBase = ({ t, lng, second }) => {
         return (
           <span key={l}>
             {index > 0 && (' or ')}
-            <Link href={`/${l}/${second}`}>
+            <Link href={second ? `/${l}/${second}` : `/${l}`}>
               {l}
             </Link>
           </span>

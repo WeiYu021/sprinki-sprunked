@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslation } from '../app/i18n';
 
 const GameRecommendation = async ({ lng, games }) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng, 'components')
   const maxRows = 4;
   const cols = 5;
@@ -34,6 +34,9 @@ const GameRecommendation = async ({ lng, games }) => {
               />
               <div className="text-center mt-2">{t(game.title)}</div>
             </div>
+            {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
+              <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-white"></div>
+            </div> */}
           </Link>
         ))}
       </div>

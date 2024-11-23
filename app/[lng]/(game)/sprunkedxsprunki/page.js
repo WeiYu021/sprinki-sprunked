@@ -6,14 +6,14 @@ import SmallHeader from '@/game_components/SmallHeader';
 import GameRecommendation from '@/game_components/GameRecommendation';
 import Types from '@/game_components/Types';
 import Videos from '@/game_components/Videos';
-import Characters from "@/game_components/Characters";
-import GamePlay from "@/game_components/GamePlay";
-import Download from "@/game_components/Download";
-import Lore from "@/game_components/Lore"
-import Creation from "@/game_components/Creation";
-import Community from "@/game_components/Community";
-import Resource from "@/game_components/Resource"
-import FAQ from '@/game_components/FAQ';
+// import Characters from "@/game_components/Characters";
+// import GamePlay from "@/game_components/GamePlay";
+// import Download from "@/game_components/Download";
+// import Lore from "@/game_components/Lore"
+// import Creation from "@/game_components/Creation";
+// import Community from "@/game_components/Community";
+// import Resource from "@/game_components/Resource"
+// import FAQ from '@/game_components/FAQ';
 import About from '@/game_components/About';
 import Privacy from '@/game_components/Privacy';
 import { getSEOTags } from "@/libs/seo";
