@@ -1,6 +1,6 @@
 'use client'
 
-const IframeBlock = ({title, discription, url}) => {
+const IframeBlock = ({title, discription, fullscreentext , url}) => {
   return (
     <section className="relative flex flex-row justify-center items-start min-h-screen mx-auto border-t border-b border-gray-300">
       <div className="text-justify p-8 mt-4"> {/* 增加 mt-16 来设置顶部间距 */}
@@ -23,7 +23,7 @@ const IframeBlock = ({title, discription, url}) => {
             onClick={() => document.getElementById('game-frame').requestFullscreen()}
             className="mt-4 px-6 py-2 btn-gradient"
           >
-            FullScreen
+            {fullscreentext}
           </button>
         </div>
       </div>

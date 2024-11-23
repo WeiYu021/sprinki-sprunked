@@ -1,8 +1,11 @@
 ﻿import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from '../app/i18n';
 
-const GameRecommendation = ({ games }) => {
+const GameRecommendation = async ({ lng, games }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng, 'components')
   const maxRows = 4;
   const cols = 5;
   const totalGames = games.length;
@@ -10,7 +13,7 @@ const GameRecommendation = ({ games }) => {
 
   return (
     <div className="container mx-auto p-8 border-t border-b border-gray-300">
-      <h2 className="text-2xl font-extrabold mb-4">Game Recommendation</h2>
+      <h2 className="text-2xl font-extrabold mb-4">{t('Game Recommendation')}</h2>
       {/* 添加边框来查看网格布局 */}
       {/* <div className="grid gap-4" style={{
         gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
@@ -18,7 +21,7 @@ const GameRecommendation = ({ games }) => {
       }}> */}
       <div className="grid grid-cols-5 gap-4">
         {games.slice(0, rows * cols).map((game, index) => (
-          <Link key={index} href={game.url_path} passHref>
+          <Link key={index} href={`/${lng}/${game.url_path.replace("/", "")}`} passHref>
             {/* 添加边框来查看每个项目 */}
             <div className="cursor-pointer">
               <Image
@@ -29,7 +32,7 @@ const GameRecommendation = ({ games }) => {
                 className="w-full h-auto"
               // 移除 layout="responsive"，因为在 Next.js 13+ 中推荐使用 fill 或具体尺寸
               />
-              <div className="text-center mt-2">{game.title}</div>
+              <div className="text-center mt-2">{t(game.title)}</div>
             </div>
           </Link>
         ))}

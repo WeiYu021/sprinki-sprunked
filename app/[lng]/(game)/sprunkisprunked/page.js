@@ -1,4 +1,5 @@
-import { Suspense } from "react";
+import Header from "@/game_components/Header";
+import { Suspense } from 'react'
 import Hero from "@/game_components/Hero";
 import Footer from "@/game_components/Footer";
 import IframeBlock from '@/game_components/IframeBlock';
@@ -17,15 +18,19 @@ import FAQ from '@/game_components/FAQ';
 import About from '@/game_components/About';
 import Privacy from '@/game_components/Privacy';
 import { getSEOTags } from "@/libs/seo";
+import { useTranslation } from '../../../i18n';
+import Language from "@/game_components/Language"
 
+export async function generateMetadata({ params: { lng } }) {
+  return getSEOTags({
+    title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
+    canonicalUrlRelative: `/${lng}`,
+  });
+}
 
-export const metadata = getSEOTags({
-  title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
-  canonicalUrlRelative: "/",
-});
-
-
-export default function Home() {
+export default async function Home({ params: { lng } }) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng)
   const games = [
     { url_path: '/sprunkisprunked', title: 'Sprunki Sprunked' },
     { url_path: '/sprunkisprunked2', title: 'Sprunki Sprunked 2.0' },
@@ -35,18 +40,24 @@ export default function Home() {
 
   return (
     <>
+      <Suspense>
+        <Header lng={lng} />
+      </Suspense>
       <main>
-        <Hero title="SPRUNKI SPRUNKED: The Ultimate Music-Making Adventure" discription="Dive into the rhythmic world of SPRUNKI SPRUNKED, where every beat tells a story and every sound is a masterpiece waiting to be created." />
         <Suspense>
-          <SmallHeader />
+          <Language lng={lng} />
+        </Suspense>
+        <Hero title={t('hero-title')} discription={t('hero-description')} />
+        <Suspense>
+          <SmallHeader lng={lng} />
         </Suspense>
         <div className="bg-amber-100">
           <div className="mx-auto bg-white lg:max-w-2/3">
-            <IframeBlock title="Create Your Own Musical Masterpiece with SPRUNKI SPRUNKED" discription="Unleash your inner composer in SPRUNKI SPRUNKED, a dynamic music-making game that lets you mix and match unique sounds and characters to craft your own unforgettable tracks. With intuitive controls and endless creative possibilities, this game is your ticket to a world of musical innovation and fun!"
-              url="https://html-classic.itch.zone/html/11995631/index.html" />
-            <GameRecommendation games={games} />
-            <Types title="Dive into the World of Sprunki Sprunked: Your Ultimate Guide to the Creepiest Music-Making Games" description="Welcome to the thrilling world of Sprunki Sprunked games, where music meets horror in a unique and immersive experience. These games are not just about creating beats; they're about crafting a chilling atmosphere with every note. Whether you're a fan of Incredibox or looking for a new way to express your creativity, our guide will take you through the spine-tingling features, characters, and soundscapes of each game. Get ready to mix, match, and scare your way to the top of the music charts."/>
-            <Videos/>
+            <IframeBlock title={t('iframe-title')} discription={t('iframe-description')} fullscreentext={t('iframe-fullscreen')}
+              url="https://scratch.mit.edu/projects/1083603932/embed" />
+            <GameRecommendation lng={lng} games={games} />
+            <Types lng={lng} />
+            <Videos lng={lng} />
             {/*<Characters/>
             <GamePlay/>
             <Download/>
@@ -55,8 +66,8 @@ export default function Home() {
             <Community/>
             <Resource/>
             <FAQ/> */}
-            <About/>
-            <Privacy/>
+            <About lng={lng} />
+            <Privacy lng={lng} />
 
           </div>
         </div>

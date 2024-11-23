@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useState } from 'react';
+import { useTranslation } from '../app/i18n/client'
 
-const RadioBlock = () => {
+const RadioBlock = ({lng}) => {
+  const { t } = useTranslation(lng, 'components')
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleOptionChange = (event) => {
@@ -11,7 +13,7 @@ const RadioBlock = () => {
 
   return (
     <div className="p-4 border rounded shadow-md"> 
-      <h2 className="text-xl font-bold mb-4">How many types of Sprunki Sprunked have you played?</h2>
+      <h2 className="text-xl font-bold mb-4">{t('Type question')}</h2>
       <div className="flex flex-col space-y-2">
         <label className="flex items-center">
           <input

@@ -1,5 +1,6 @@
 import React from 'react';
 import RadioBlock from '@/game_components/RadioBlock';
+import { useTranslation } from '../app/i18n';
 
 const SmallTypes = ({ gameName, gameIntro, feature1, feature2, feature3, tag1, tag2, tag3 }) => {
   return (
@@ -21,57 +22,58 @@ const SmallTypes = ({ gameName, gameIntro, feature1, feature2, feature3, tag1, t
   );
 };
 
-const Types = ({ title, description }) => {
+const Types = async ({ lng}) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng, 'components')
   return (
     <div className="container mx-auto p-8 border-t border-b border-gray-300" id="types">
-      <h2 className="text-2xl font-extrabold mb-4">{title}</h2>
-      <p className="text-lg opacity-80 mb-4">{description}</p>
-      <RadioBlock />
+      <h2 className="text-2xl font-extrabold mb-4">{t('types-title')}</h2>
+      <p className="text-lg opacity-80 mb-4">{t('types-description')}</p>
+      <RadioBlock lng={lng}/>
       <div className="mt-8 space-y-4">
         <SmallTypes
-          gameName="Sprunki Sprunked"
-          gameIntro="Embark on a musical adventure with The New Sprunki Sprunked, a game that lets you create original tracks by combining beats, sounds, and characters in a vibrant and interactive world。"
-          feature1="Easy Drag-and-Drop Controls: Intuitive gameplay that allows you to focus on the music, not the mechanics."
-          feature2="Endless Musical Possibilities: With a variety of characters and sounds, every choice leads to a new and unique beat."
-          feature3="Creative and Addictive Gameplay: Dive into a game that stimulates your creativity and keeps you coming back for more."
-          tag1="Interactive Music-Making"
-          tag2="Vibrant World"
-          tag3="Creative Adventure
-"
+          gameName={t('Sprunki Sprunked')}
+          gameIntro={t('Sprunki Sprunked Introduction')}
+          feature1={t("Sprunki Sprunked Feature1")}
+          feature2={t("Sprunki Sprunked Feature2")}
+          feature3={t("Sprunki Sprunked Feature3")}
+          tag1={t("Sprunki Sprunked Tag1")}
+          tag2={t("Sprunki Sprunked Tag2")}
+          tag3={t("Sprunki Sprunked Tag3")}
         />
         <SmallTypes
-          gameName="Sprunki Sprunked 2.0"
-          gameIntro="Dare to step into the enhanced world of Sprunki Sprunked 2.0, where every character and sound has been reimagined with a horror twist. This mod takes the original series to new heights of fear and creativity."
-          feature1="Horror-Inspired Characters: Each character has been redesigned with a terrifying touch, making your music as scary as it is catchy."
-          feature2="Engaging Atmosphere: The game's chilling visuals and soundscapes pull you into a world of fear, where every beat has a bite."
-          feature3="Unlockable Sound Effects: Discover special sound effects by combining characters in unique ways, adding a layer of depth to your musical compositions."
-          tag1="Horror Themed"
-          tag2="Enhanced Characters"
-          tag3="Interactive Music-Making"
+          gameName={t('Sprunki Sprunked 2.0')}
+          gameIntro={t('Sprunki Sprunked 2.0 Introduction')}
+          feature1={t('Sprunki Sprunked 2.0 Feature1')}
+          feature2={t('Sprunki Sprunked 2.0 Feature2')}
+          feature3={t('Sprunki Sprunked 2.0 Feature3')}
+          tag1={t("Sprunki Sprunked 2.0 Tag1")}
+          tag2={t("Sprunki Sprunked 2.0 Tag2")}
+          tag3={t("Sprunki Sprunked 2.0 Tag3")}
         />
         <SmallTypes
-          gameName="Sprunked x Sprunki"
-          gameIntro="Experience the fusion of two worlds with Sprunked x Sprunki, a mod that blends the dark essence of Sprunked with the playful traits of Sprunki, creating a horror-themed ambiance that's perfect for music lovers with a taste for the macabre."
-          feature1="Redesigned Characters: A mix of Sprunked's darkness and Sprunki's playfulness, these characters offer a fresh take on the Incredibox universe."
-          feature2="Immersive Atmosphere: Dark visuals and shadowy backgrounds envelop you in a horror-themed environment that enhances your musical experience."
-          feature3="Enhanced Sound Effects: Add depth to your compositions with improved sound effects that keep the core gameplay mechanics intact."
-          tag1="Dark Essence"
-          tag2="Horror Ambiance"
-          tag3="Musical Depth"
+          gameName={t('Sprunked x Sprunki')}
+          gameIntro={t('Sprunked x Sprunki Introduction')}
+          feature1={t('Sprunked x Sprunki Feature1')}
+          feature2={t('Sprunked x Sprunki Feature2')}
+          feature3={t('Sprunked x Sprunki Feature3')}
+          tag1={t("Sprunked x Sprunki Tag1")}
+          tag2={t("Sprunked x Sprunki Tag2")}
+          tag3={t("Sprunked x Sprunki Tag3")}
         />
         <SmallTypes
-          gameName="Sprunki Romantic Mod"
-          gameIntro="The Sprunki Romantic Mod introduces a whimsical and humorous take on the romantic relationships within the Incredibox universe, featuring characters in both conventional and quirky scenarios. "
-          feature1="Unique Character Dynamics: The mod showcases a variety of characters with distinct personalities and romantic interactions, making each encounter feel fresh and engaging. Players can explore different relationships, adding depth to the narrative."
-          feature2="Humorous Gameplay Mechanics: The challenge incorporates lighthearted elements that reflect the quirks of romance, allowing players to experience both sweet and silly moments as they progress through levels."
-          feature3="Interactive Music Creation: As with the original Incredibox, players can mix and match sounds while participating in the romantic challenges, creating a unique musical backdrop that complements the gameplay. This feature encourages creativity and enhances the overall experience."
-          tag1="Incredibox"
-          tag2="SprunkiRomance"
-          tag3="RhythmGame"
+          gameName={t('Sprunki Romantic Mod')}
+          gameIntro={t('Sprunki Romantic Mod Introduction')}
+          feature1={t('Sprunki Romantic Mod Feature1')}
+          feature2={t('Sprunki Romantic Mod Feature2')}
+          feature3={t('Sprunki Romantic Mod Feature3')}
+          tag1={t("Sprunki Romantic Mod Tag1")}
+          tag2={t("Sprunki Romantic Mod Tag2")}
+          tag3={t("Sprunki Romantic Mod Tag3")}
         />
       </div>
       <div className="bg-white shadow-lg rounded-lg p-6 mt-4 mb-4">
-       <h3 className="text-xl font-bold mb-2">More Website:</h3>
+       <h3 className="text-xl font-bold mb-2">{t('More Website')}</h3>
         <a href="https://iuu.ai/" className="text-blue-500 hover:underline font-bold text-lg">iuu AI</a>
         <br />
         <a href="https://magicbox.tools/" title="MagicBox.Tools - AI Tools Directory" className="text-blue-500 hover:underline font-bold text-lg">MagicBox.Tools - AI Tools Diresctory</a>

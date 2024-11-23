@@ -6,43 +6,45 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/app/icon.png";
 import config from "@/config";
-
-const links = [
-  {
-    href: "/",
-    label: "Homepage",
-  },
-  {
-    href: "/",
-    label: "Leaderboard",
-  },
-  {
-    href: "/",
-    label: "Blog",
-  },
-  {
-    href: "/#about",
-    label: "About",
-  },
-  {
-    href: "/#about",
-    label: "Contact",
-  },
-  {
-    href: "/#about",
-    label: "Terms of use",
-  },
-  {
-    href: "/#privacy",
-    label: "Privacy",
-  },
-];
-
+import { useTranslation } from '../app/i18n/client'
 // const cta = <ButtonSignin extraStyle="btn-primary" />;
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
-const Header = () => {
+const Header = ({ lng }) => {
+  const { t } = useTranslation(lng, 'header')
+  const links = [
+    {
+      href: "/",
+      labelKey: 'homepage'  // 对应翻译文件中的key
+    },
+    {
+      href: "/",
+      labelKey: 'leaderboard'
+    },
+    {
+      href: "/",
+      labelKey: 'blog'
+    },
+    {
+      href: "/#about",
+      labelKey: 'about'
+    },
+    {
+      href: "/#about",
+      labelKey: 'contact'
+    },
+    {
+      href: "/#about",
+      labelKey: 'terms'
+    },
+    {
+      href: "/#privacy",
+      labelKey: 'privacy'
+    },
+  ];
+
+
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -108,9 +110,9 @@ const Header = () => {
               href={link.href}
               key={link.href}
               className="link link-hover"
-              title={link.label}
+              title={t(link.labelKey)}
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
         </div>

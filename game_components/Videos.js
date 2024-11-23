@@ -1,5 +1,6 @@
 ﻿'use client';
 import React from 'react';
+import { useTranslation } from '../app/i18n/client'
 // import SmallVideoBlock from '@/game_components/SmallVideoBlock';
 
 const SmallVideoBlock = ({
@@ -41,14 +42,15 @@ const SmallVideoBlock = ({
   );
 };
 
-const Videos = () => {
+const Videos = ({lng}) => {
+  const { t } = useTranslation(lng, 'components')
   return (
     <div className="container mx-auto p-8 border-t border-b border-gray-300" id="videos">
-      <h2 className="text-2xl font-extrabold mb-4"> Featured Sprunki Video </h2>
+      <h2 className="text-2xl font-extrabold mb-4"> {t('Video Main')}</h2>
       <div className="mt-8 space-y-4">
-        <SmallVideoBlock title="Incredibox Sprunki | Sprunked VS Sprunked BUT Sprunki Style" description="Comparison of 2 Incredibox mods. Incredibox Sprunki Sprunked VS Sprunked BUT Sprunki Style" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/2.mp4" />
-        <SmallVideoBlock title="Sprunked x Sprunki /Incredibox Sprunki" description="" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/3.mp4" />
-        <SmallVideoBlock title="Sprunked 2.0 - Sprunki Mods" description="Sprunked 2.0 - Sprunki Mods Incredibox Sprunki Mods    • Incredibox - POPPY PLAYTIME - Horror ... Incredibox Sprunki ALL PHASES VS Sprunki Phase 1 to 10 Mods" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/4.mp4" />
+        <SmallVideoBlock title={t("Video1 title")} description={t("Video1 Introduction")} videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/2.mp4" />
+        <SmallVideoBlock title={t("Video2 title")} description="" videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/3.mp4" />
+        <SmallVideoBlock title={t("Video3 title")} description={t("Video3 Introduction")} videoUrl="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/4.mp4" />
       </div>
     </div>
   );

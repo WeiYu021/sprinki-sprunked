@@ -1,11 +1,8 @@
 import { Inter } from "next/font/google";
 import PlausibleProvider from "next-plausible";
 import { getSEOTags } from "@/libs/seo";
-import ClientLayout from "@/components/LayoutClient";
 import config from "@/config";
 import "./globals.css";
-import Header from "@/game_components/Header";
-import { Suspense } from 'react'
 import Script from 'next/script';
 import { dir } from 'i18next'
 import { languages } from '../i18n/settings'
@@ -57,9 +54,6 @@ export default function RootLayout({
       <body>
 
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
-          <Suspense>
-            <Header />
-          </Suspense>
           
           {children}
       </body>

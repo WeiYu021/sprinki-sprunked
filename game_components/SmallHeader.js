@@ -3,51 +3,52 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { useTranslation } from '../app/i18n/client'
 
 const links = [
   {
     href: "/#types",
-    label: "Types",
+    labelKey: "Types",
   },
   {
     href: "/#videos",
-    label: "Videos",
+    labelKey: "Videos",
   },
   {
     href: "/#characters",
-    label: "Characters",
+    labelKey: "Characters",
   },
   {
     href: "/#gameplay",
-    label: "Gameplay",
+    labelKey: "Gameplay",
   },
   {
     href: "/#download",
-    label: "Download",
+    labelKey: "Download",
   },
   {
     href: "/#lore",
-    label: "Lore",
+    labelKey: "Lore",
   },
   {
     href: "/#community",
-    label: "Community",
+    labelKey: "Community",
   },
   {
     href: "/#creation",
-    label: "Creation",
+    labelKey: "Creation",
   },
   {
     href: "/#resource",
-    label: "Resource",
+    labelKey: "Resource",
   },
   {
     href: "/#faq",
-    label: "FAQ",
+    labelKey: "FAQ",
   },
   {
     href: "/#about",
-    label: "About",
+    labelKey: "About",
   },
 ];
 
@@ -55,7 +56,9 @@ const links = [
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
-const SmallHeader = () => {
+const SmallHeader = ({ lng }) => {
+
+  const { t } = useTranslation(lng, 'smallheader')
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -121,9 +124,9 @@ const SmallHeader = () => {
                 href={link.href}
                 key={link.href}
                 className="link link-hover"
-                title={link.label}
+                title={t(link.labelKey)}
               >
-                {link.label}
+                {t(link.labelKey)}
               </Link>
             ))}
         </div>
