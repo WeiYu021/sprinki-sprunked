@@ -21,10 +21,12 @@ import { getSEOTags } from "@/libs/seo";
 import { useTranslation } from '../i18n';
 import Language from "@/game_components/Language"
 
-export const metadata = getSEOTags({
+export async function generateMetadata({ params: { lng } }) {
+  return getSEOTags({
   title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
-  canonicalUrlRelative: "/",
+  canonicalUrlRelative: `/${lng}`,
 });
+}
 
 export default async function Home({ params: { lng } }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
