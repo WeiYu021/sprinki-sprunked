@@ -21,28 +21,56 @@ import { getSEOTags } from "@/libs/seo";
 import { useTranslation } from '@/app/i18n';
 import Language from "@/game_components/Language"
 
-export async function generateMetadata({ params: { lng } }) {
+export async function generateMetadata() {
   return getSEOTags({
     title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
-    canonicalUrlRelative: `/${lng}`,
+    canonicalUrlRelative: "/",
   });
 }
 
-export default async function Home({ params: { lng } }) {
+export default async function Home() {
+  const lng = "en"
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng)
+
   const games = [
-    { url_path: '/sprunkisprunked', title: 'Sprunki Sprunked' },
+    { url_path: "/sprunkisprunked", title: 'Sprunki Sprunked' },
     { url_path: '/sprunkisprunked2', title: 'Sprunki Sprunked 2.0' },
     { url_path: '/sprunkedxsprunki', title: 'Sprunked x Sprunki' },
     { url_path: '/sprunkiromanticmod', title: 'Sprunki Romantic Mod' },
   ]
+  // Sprunki Sprunked 2.0 
+  // https://sprunkedgame.org/sprunked-game.embed
+  // Sprunki Sprunked 2.0 Mod is a version that enhances the original Incredibox Sprunki series, 
+  // introducing a mix of horror features, exclusive characters, and an engaging atmosphere. 
+  // This mod builds on its predecessor to create new soundscapes, enchanting characters, and frightening visuals, 
+  // offering players an unforgettable experience. The gameplay involves selecting enhanced characters, 
+  // combining sounds to craft personal soundtracks filled with terrifying beats and melodies, and 
+  // unlocking special sound effects through unique combinations of characters. Key features include 
+  // redesigned character looks with horror-inspired designs, magnified horror visuals that enhance the 
+  // game's chilling atmosphere, and enriched sound layers for more intense music mixes1.
+
+  // Sprunked x Sprunki
+  // https://wowtbc.net/sprunkin/sprunked-x-sprunki/index.html
+  // The Sprunked x Sprunki Mod combines elements from both the Sprunked and Sprunki mods within the Incredibox universe. 
+  // It features redesigned characters that blend the dark essence of Sprunked with the playful traits of Sprunki. 
+  // This mod emphasizes a horror-themed ambiance with dark visuals and shadowy backgrounds, creating an immersive atmosphere 
+  // that complements the music. Players 
+  // can enjoy enhanced sound effects that add depth to their musical compositions 
+  // while maintaining the core gameplay mechanics of Incredibox2.
+
+  // Sprunki Sprunked
+  // https://html-classic.itch.zone/html/11995631/index.html
+  // The New Incredibox - SPRUNKED  is a fun, interactive music-making game where you combine beats, sounds, and 
+  // characters to create original tracks. Dive into a vibrant world where each character adds a unique sound, 
+  // and every choice builds a new beat. With easy drag-and-drop controls, Incredibox - SPRUNKED lets 
+  // you explore endless musical possibilities in a game that’s both creative and addictive. 
 
   return (
     <>
-      <Suspense>
+      {/* <Suspense>
         <Header lng={lng} />
-      </Suspense>
+      </Suspense> */}
       <main>
         <Suspense>
           <Language lng={lng} />
@@ -55,7 +83,9 @@ export default async function Home({ params: { lng } }) {
           <div className="mx-auto bg-white lg:max-w-2/3">
             <IframeBlock title={t('iframe-title')} discription={t('iframe-description')} fullscreentext={t('iframe-fullscreen')}
               url="https://scratch.mit.edu/projects/1083603932/embed" />
-            <GameRecommendation lng={lng} games={games} />
+            <Suspense>
+              <GameRecommendation lng={lng} games={games} />
+            </Suspense>
             <Types lng={lng} />
             <Videos lng={lng} />
             {/*<Characters/>

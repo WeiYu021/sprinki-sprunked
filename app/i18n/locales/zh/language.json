@@ -1,3 +1,4 @@
 {
-  "languageSwitcher": "从 <1>{{lng}}</1> 转为： "
+  "languageName":"中文",
+  "selectLanguage": "选择语言："
 }

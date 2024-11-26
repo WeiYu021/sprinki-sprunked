@@ -1,7 +1,6 @@
-import Header from "@/game_components/Header";
-import { Suspense } from 'react'
+﻿import Header from "@/game_components/Header";
+import { Suspense } from "react";
 import Hero from "@/game_components/Hero";
-// import Footer from "@/game_components/Footer";
 import IframeBlock from '@/game_components/IframeBlock';
 import SmallHeader from '@/game_components/SmallHeader';
 import GameRecommendation from '@/game_components/GameRecommendation';
@@ -21,14 +20,17 @@ import { getSEOTags } from "@/libs/seo";
 import { useTranslation } from '@/app/i18n';
 import Language from "@/game_components/Language"
 
-export async function generateMetadata({ params: { lng } }) {
+
+export async function generateMetadata() {
   return getSEOTags({
-    title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
-    canonicalUrlRelative: `/${lng}`,
+    title: "Sprunked x Sprunki: A Chilling Collaboration - Blend Horror with Music in Incredibox",
+    canonicalUrlRelative: "/sprunkedxsprunki",
   });
 }
 
-export default async function Home({ params: { lng } }) {
+
+export default async function Home() {
+  const lng = "en"
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng)
   const games = [
@@ -47,14 +49,14 @@ export default async function Home({ params: { lng } }) {
         <Suspense>
           <Language lng={lng} />
         </Suspense>
-        <Hero title={t('hero-title')} discription={t('hero-description')} />
+        <Hero title={t('sprunkedxsprunki-hero-title')} discription={t('sprunkedxsprunki-hero-description')} />
         <Suspense>
           <SmallHeader lng={lng} />
         </Suspense>
         <div className="bg-amber-100">
           <div className="mx-auto bg-white lg:max-w-2/3">
-            <IframeBlock title={t('iframe-title')} discription={t('iframe-description')} fullscreentext={t('iframe-fullscreen')}
-              url="https://scratch.mit.edu/projects/1083603932/embed" />
+            <IframeBlock title={t('sprunkedxsprunki-iframe-title')} discription={t('sprunkedxsprunki-iframe-description')} fullscreentext={t('sprunkedxsprunki-iframe-fullscreen')}
+              url="https://wowtbc.net/sprunkin/sprunked-x-sprunki/index.html" />
             <GameRecommendation lng={lng} games={games} />
             <Types lng={lng} />
             <Videos lng={lng} />

@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { useTranslation } from '../app/i18n';
 
 const GameRecommendation = async ({ lng, games }) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { t } = await useTranslation(lng, 'components')
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } =  await useTranslation(lng, 'components')
   const maxRows = 4;
   const cols = 5;
   const totalGames = games.length;

@@ -22,14 +22,17 @@ const SmallTypes = ({ gameName, gameIntro, feature1, feature2, feature3, tag1, t
   );
 };
 
-const Types = async ({ lng}) => {
+const Types = async ({ lng }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng, 'components')
   return (
     <div className="container mx-auto p-8 border-t border-b border-gray-300" id="types">
       <h2 className="text-2xl font-extrabold mb-4">{t('types-title')}</h2>
       <p className="text-lg opacity-80 mb-4">{t('types-description')}</p>
-      <RadioBlock lng={lng}/>
+      <div className="p-4 border rounded shadow-md">
+        <h2 className="text-xl font-bold mb-4">{t('Type question')}</h2>
+        <RadioBlock/>
+      </div>
       <div className="mt-8 space-y-4">
         <SmallTypes
           gameName={t('Sprunki Sprunked')}
@@ -73,7 +76,7 @@ const Types = async ({ lng}) => {
         />
       </div>
       <div className="bg-white shadow-lg rounded-lg p-6 mt-4 mb-4">
-       <h3 className="text-xl font-bold mb-2">{t('More Website')}</h3>
+        <h3 className="text-xl font-bold mb-2">{t('More Website')}</h3>
         <a href="https://iuu.ai/" className="text-blue-500 hover:underline font-bold text-lg">iuu AI</a>
         <br />
         <a href="https://magicbox.tools/" title="MagicBox.Tools - AI Tools Directory" className="text-blue-500 hover:underline font-bold text-lg">MagicBox.Tools - AI Tools Diresctory</a>
@@ -83,10 +86,10 @@ const Types = async ({ lng}) => {
         <a title="The Best AI Tools" href="https://allinai.tools" className="text-blue-500 hover:underline font-bold text-lg">All in AI Tools</a>
         <br />
         <a href="https://right-ai.com/" title="RightAI Tools Directory" className="text-blue-500 hover:underline font-bold text-lg">RightAI Tools Diresctory</a>
-        <br />     
+        <br />
         <a href="https://aijustworks.com" title="AI Just Works" className="text-blue-500 hover:underline font-bold text-lg">AI Just Works</a>
         <br />
-        <a href="https://SeekAIs.com/" title="SeekAIs" className="text-blue-500 hover:underline font-bold text-lg">SeekAIs - AI Tools Directory</a> 
+        <a href="https://SeekAIs.com/" title="SeekAIs" className="text-blue-500 hover:underline font-bold text-lg">SeekAIs - AI Tools Directory</a>
         <br />
         <a href="https://AIToolly.com/" title="Best AI Tools Directory" className="text-blue-500 hover:underline font-bold text-lg">AIToolly</a>
         <a href="https://www.aitoolnet.com/" target="_blank"><img src="http://www.aitoolnet.com/static/assets/images/logo.svg" alt="aitoolnet.com" /></a>

@@ -123,9 +123,9 @@ export default function Custom404() {
           Home
         </Link>
         <p className="text-lg md:text-4xl font-semibold mt-10">
-          Don&apos;t worry! Why not try one of these awesome games?
+          Don&apos;t worry! Why not try one of these awesome games
         </p>
-        <GameRecommendation games={games} />
+        <GameRecommendation games={games}/>
       </div>
     </section>
   );

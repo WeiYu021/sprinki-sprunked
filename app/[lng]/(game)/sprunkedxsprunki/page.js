@@ -17,7 +17,7 @@ import Videos from '@/game_components/Videos';
 import About from '@/game_components/About';
 import Privacy from '@/game_components/Privacy';
 import { getSEOTags } from "@/libs/seo";
-import { useTranslation } from '../../../i18n';
+import { useTranslation } from '@/app/i18n';
 import Language from "@/game_components/Language"
 
 

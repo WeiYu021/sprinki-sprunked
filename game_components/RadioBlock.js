@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useState } from 'react';
-import { useTranslation } from '../app/i18n/client'
+// import { useTranslation } from '../app/i18n/client'
 
-const RadioBlock = ({lng}) => {
-  const { t } = useTranslation(lng, 'components')
+const RadioBlock = () => {
+  // const { t } = useTranslation(lng, 'components')
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleOptionChange = (event) => {
@@ -12,8 +12,7 @@ const RadioBlock = ({lng}) => {
   };
 
   return (
-    <div className="p-4 border rounded shadow-md"> 
-      <h2 className="text-xl font-bold mb-4">{t('Type question')}</h2>
+
       <div className="flex flex-col space-y-2">
         <label className="flex items-center">
           <input
@@ -66,7 +65,6 @@ const RadioBlock = ({lng}) => {
           5
         </label>
       </div>
-    </div>
   );
 };
 

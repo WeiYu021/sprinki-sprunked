@@ -2,10 +2,10 @@ import { Inter } from "next/font/google";
 import PlausibleProvider from "next-plausible";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
-import "./globals.css";
+import "@/app/globals.css";
 import Script from 'next/script';
 import { dir } from 'i18next'
-import { languages } from '../i18n/settings'
+import { languages } from './i18n/settings'
 
 
 

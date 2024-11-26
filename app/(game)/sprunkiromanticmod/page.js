@@ -1,8 +1,7 @@
-import Header from "@/game_components/Header";
-import { Suspense } from 'react'
+﻿import { Suspense } from "react";
 import Hero from "@/game_components/Hero";
 // import Footer from "@/game_components/Footer";
-import IframeBlock from '@/game_components/IframeBlock';
+import VideoBlock from '@/game_components/VideoBlock';
 import SmallHeader from '@/game_components/SmallHeader';
 import GameRecommendation from '@/game_components/GameRecommendation';
 import Types from '@/game_components/Types';
@@ -20,15 +19,19 @@ import Privacy from '@/game_components/Privacy';
 import { getSEOTags } from "@/libs/seo";
 import { useTranslation } from '@/app/i18n';
 import Language from "@/game_components/Language"
+import Header from "@/game_components/Header";
 
-export async function generateMetadata({ params: { lng } }) {
+
+export async function generateMetadata() {
   return getSEOTags({
-    title: "Sprunki Sprunked: Craft Original Tracks in a Spooky, Interactive Music World",
-    canonicalUrlRelative: `/${lng}`,
+    title: "Sprunki Romantic Mod: Incredibox Sprunki ROMANTIC KISS Run Challenge",
+    canonicalUrlRelative: "/sprunkiromanticmod",
   });
 }
 
-export default async function Home({ params: { lng } }) {
+
+export default async function Home() {
+  const lng = "en"
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng)
   const games = [
@@ -47,14 +50,15 @@ export default async function Home({ params: { lng } }) {
         <Suspense>
           <Language lng={lng} />
         </Suspense>
-        <Hero title={t('hero-title')} discription={t('hero-description')} />
+        <Hero title={t('sprunkiromanticmod-hero-title')} discription={t('sprunkiromanticmod-hero-description')} />
         <Suspense>
-          <SmallHeader lng={lng} />
+          <SmallHeader lng={lng}/>
         </Suspense>
         <div className="bg-amber-100">
           <div className="mx-auto bg-white lg:max-w-2/3">
-            <IframeBlock title={t('iframe-title')} discription={t('iframe-description')} fullscreentext={t('iframe-fullscreen')}
-              url="https://scratch.mit.edu/projects/1083603932/embed" />
+            {/* <IframeBlock title="Discover Sprunked x Sprunki - Blend Horror with Music in One Click" discription="Are you ready to explore the fusion of two worlds? Play Sprunked x Sprunki now and let the dark and playful characters guide you through a musical journey like no other. Click the button below to dive into a horror-themed Incredibox experience that will have you composing tunes in the shadows."
+              url="https://wowtbc.net/sprunkin/sprunked-x-sprunki/index.html" /> */}
+            <VideoBlock title={t('sprunkiromanticmod-videoblock-title')} discription={t('sprunkiromanticmod-videoblock-description')} url="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/5.mp4" />
             <GameRecommendation lng={lng} games={games} />
             <Types lng={lng} />
             <Videos lng={lng} />
