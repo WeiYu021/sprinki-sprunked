@@ -2,11 +2,20 @@
 import LanguageBase from '@/game_components/LanguageBase'
 import { useTranslation } from '@/app/i18n/client'
 import { usePathname } from 'next/navigation'
+import { languages } from '@/app/i18n/settings'
 
 const Language = ({ lng }) => {
   const pathname = usePathname()
   const pathSegments = pathname.split('/')
-  const secondSegment = pathSegments[2]
+  let secondSegment
+  if (pathSegments.length == 3) {
+    secondSegment = pathSegments[2]
+  }else if(pathSegments.length == 2){
+    if(!languages.includes(pathSegments[1])){
+      secondSegment = pathSegments[1]
+    }
+  }
+  
   const { t } = useTranslation(lng, 'language')
 
   return (
