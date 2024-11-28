@@ -16,27 +16,38 @@ export function middleware(req) {
 
   const pathname = req.nextUrl.pathname
   
-  // 处理根路径 - 只在首次访问时重定向到检测到的语言
-  if (pathname === '/') {
-    // 如果是默认语言(英文)，保持在根路径
-    if (lng === fallbackLng) {
-      return NextResponse.next()
-    }
-    // 其他语言重定向到对应语言路径
-    return NextResponse.redirect(new URL(`/${lng}`, req.url))
+  if(pathname === `/${fallbackLng}`)
+  {
+    return NextResponse.redirect(new URL(pathname.replace(`/${fallbackLng}`, '/'), req.url))
+  }
+    
+    
+  if(pathname.startsWith(`/${fallbackLng}/`) )
+  {
+    return NextResponse.redirect(new URL(pathname.replace(`/${fallbackLng}/`, '/'), req.url))
   }
 
-  // 检查当前URL是否已经包含语言前缀
-  const pathnameHasLang = languages.some(loc => pathname.startsWith(`/${loc}`))
+  // // 处理根路径 - 只在首次访问时重定向到检测到的语言
+  // if (pathname === '/') {
+  //   // 如果是默认语言(英文)，保持在根路径
+  //   if (lng === fallbackLng) {
+  //     return NextResponse.next()
+  //   }
+  //   // 其他语言重定向到对应语言路径
+  //   return NextResponse.redirect(new URL(`/${lng}`, req.url))
+  // }
+
+  // // 检查当前URL是否已经包含语言前缀
+  // const pathnameHasLang = languages.some(loc => pathname.startsWith(`/${loc}`))
   
-  // 如果URL中没有语言前缀，且不是系统路径，添加语言前缀
-  if (!pathnameHasLang && !pathname.startsWith('/_next')) {
-    // 如果是默认语言，不添加语言前缀
-    if (lng === fallbackLng) {
-      return NextResponse.next()
-    }
-    return NextResponse.redirect(new URL(`/${lng}${pathname}`, req.url))
-  }
+  // // 如果URL中没有语言前缀，且不是系统路径，添加语言前缀
+  // if (!pathnameHasLang && !pathname.startsWith('/_next')) {
+  //   // 如果是默认语言，不添加语言前缀
+  //   if (lng === fallbackLng) {
+  //     return NextResponse.next()
+  //   }
+  //   return NextResponse.redirect(new URL(`/${lng}${pathname}`, req.url))
+  // }
 
   // 处理 referer 并设置 cookie
   if (req.headers.has('referer')) {

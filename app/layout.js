@@ -33,7 +33,7 @@ export default function RootLayout({
     } 
 }) {
   return (
-    <html lang={lng} dir={dir(lng)} data-theme={config.colors.theme} className={font.className}>
+    <html lang={lng} data-theme={config.colors.theme} className={font.className}>
       {config.domainName && (
         <head>
           <PlausibleProvider domain={config.domainName} />

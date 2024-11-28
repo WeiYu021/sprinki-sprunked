@@ -4,7 +4,8 @@ import { languages } from '@/app/i18n/settings';
 
 const languageNames = {
   en: 'English',
-  zh: '中文'
+  zh: '中文',
+  ja: '日本語',
 };
 
 const LanguageBase = ({ t, lng, second }) => {

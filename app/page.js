@@ -68,9 +68,9 @@ export default async function Home() {
 
   return (
     <>
-      {/* <Suspense>
+      <Suspense>
         <Header lng={lng} />
-      </Suspense> */}
+      </Suspense>
       <main>
         <Suspense>
           <Language lng={lng} />
