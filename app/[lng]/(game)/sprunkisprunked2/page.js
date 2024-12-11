@@ -55,9 +55,13 @@ export default async function Home({ params: { lng } }) {
           <div className="mx-auto bg-white lg:max-w-2/3">
             <IframeBlock title={t('sprunkisprunked2-iframe-title')} discription={t('sprunkisprunked2-iframe-description')} fullscreentext={t('sprunkisprunked2-iframe-fullscreen')}
               url="https://wowtbc.net/sprunkin/sprunked2/index.html" />
-            <GameRecommendation lng={lng} games={games} />
+            <Suspense>
+              <GameRecommendation lng={lng} games={games} />
+            </Suspense>
             <Types lng={lng} />
-            <Videos lng={lng} />
+            <Suspense>
+              <Videos lng={lng} />
+            </Suspense>
             {/*<Characters/>
             <GamePlay/>
             <Download/>

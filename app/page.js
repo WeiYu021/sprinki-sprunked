@@ -87,7 +87,10 @@ export default async function Home() {
               <GameRecommendation lng={lng} games={games} />
             </Suspense>
             <Types lng={lng} />
-            <Videos lng={lng} />
+            <Suspense>
+              <Videos lng={lng} />
+            </Suspense>
+            
             {/*<Characters/>
             <GamePlay/>
             <Download/>

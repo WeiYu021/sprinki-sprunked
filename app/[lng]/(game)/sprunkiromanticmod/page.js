@@ -58,9 +58,13 @@ export default async function Home({ params: { lng } }) {
             {/* <IframeBlock title="Discover Sprunked x Sprunki - Blend Horror with Music in One Click" discription="Are you ready to explore the fusion of two worlds? Play Sprunked x Sprunki now and let the dark and playful characters guide you through a musical journey like no other. Click the button below to dive into a horror-themed Incredibox experience that will have you composing tunes in the shadows."
               url="https://wowtbc.net/sprunkin/sprunked-x-sprunki/index.html" /> */}
             <VideoBlock title={t('sprunkiromanticmod-videoblock-title')} discription={t('sprunkiromanticmod-videoblock-description')} url="https://sprunki-game-assets-worker.yuweiloopy.workers.dev/5.mp4" />
-            <GameRecommendation lng={lng} games={games} />
+            <Suspense>
+              <GameRecommendation lng={lng} games={games} />
+            </Suspense>
             <Types lng={lng} />
-            <Videos lng={lng} />
+            <Suspense>
+              <Videos lng={lng} />
+            </Suspense>
             {/*<Characters/>
             <GamePlay/>
             <Download/>

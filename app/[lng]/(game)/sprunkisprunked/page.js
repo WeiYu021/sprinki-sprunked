@@ -55,9 +55,13 @@ export default async function Home({ params: { lng } }) {
           <div className="mx-auto bg-white lg:max-w-2/3">
             <IframeBlock title={t('iframe-title')} discription={t('iframe-description')} fullscreentext={t('iframe-fullscreen')}
               url="https://scratch.mit.edu/projects/1083603932/embed" />
-            <GameRecommendation lng={lng} games={games} />
+            <Suspense>
+              <GameRecommendation lng={lng} games={games} />
+            </Suspense>
             <Types lng={lng} />
-            <Videos lng={lng} />
+            <Suspense>
+              <Videos lng={lng} />
+            </Suspense>
             {/*<Characters/>
             <GamePlay/>
             <Download/>
