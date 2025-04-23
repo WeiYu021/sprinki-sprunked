@@ -56,6 +56,9 @@ This project is licensed under the [MIT License](LICENSE.md). Feel free to use, 
 
 A big thank you to the community for their support and enthusiasm for the Sprunki Sprunked series. Your passion is what drives this project forward.
 
+Other website: [Tarot Card Website](https://tarotcardgenerator.org)
+
+
 ---
 
 We hope you enjoy the Sprunki Sprunked game and the website! If you have any questions or need assistance, don't hesitate to reach out. Happy gaming! 🎮🎶
